@@ -23,7 +23,9 @@ class _Element(Sequence['_Element']):
     attrib = ...  # type: MutableMapping[str, str]
     text = ...  # type: _AnyStr
     tag = ...  # type: str
+    nsmap = ... # type: MutableMapping[Union[str, None], str]
     def append(self, element: '_Element') -> '_Element': ...
+    def get(self, key: str) -> str: ...
 
 class ElementBase(_Element): ...
 
